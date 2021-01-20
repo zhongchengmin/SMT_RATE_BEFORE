@@ -1,0 +1,6 @@
+C:\Users\chengmin.zhong\Desktop\SMT_RATE_BEFORE\SMT_RATE_BEFORE\bin\SMT_RATE_BEFORE.dll
+C:\Users\chengmin.zhong\Desktop\SMT_RATE_BEFORE\SMT_RATE_BEFORE\bin\SMT_RATE_BEFORE.pdb
+C:\Users\chengmin.zhong\Desktop\SMT_RATE_BEFORE\SMT_RATE_BEFORE\bin\Oracle.DataAccess.dll
+C:\Users\chengmin.zhong\Desktop\SMT_RATE_BEFORE\SMT_RATE_BEFORE\obj\Debug\SMT_RATE_BEFORE.csprojResolveAssemblyReference.cache
+C:\Users\chengmin.zhong\Desktop\SMT_RATE_BEFORE\SMT_RATE_BEFORE\obj\Debug\SMT_RATE_BEFORE.dll
+C:\Users\chengmin.zhong\Desktop\SMT_RATE_BEFORE\SMT_RATE_BEFORE\obj\Debug\SMT_RATE_BEFORE.pdb

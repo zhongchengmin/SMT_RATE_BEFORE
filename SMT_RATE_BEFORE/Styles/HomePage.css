@@ -1,0 +1,52 @@
+﻿.logo {
+    float: left;
+    height: 50px;
+    width: 140px;
+}
+.navbar
+{
+    background: #4A515B;
+    height: 50px;
+    line-height: 50px;
+}
+.navbar-brand{
+    font-family: "Microsoft Yahei" , "Arial";
+    color: #9d9d9d;
+    font-size: 18px;
+}
+a.navbar-brand:hover
+{
+    color:White;    
+}
+.form
+{
+    margin:10px 0;    
+}
+.secondRow
+{
+    margin-top:5px;    
+}
+.container table
+{
+    width:100%;  
+}
+.container td
+{
+    text-align:center;    
+    font-weight: bold;
+    border:1px solid black;
+}
+.container tr:nth-child(n+2){
+    background-color:#3ADA3A;    
+}
+.container tr td:first-child{
+    background-color:White;    
+}
+
+.container tr:first-child{
+    background-color:pink;
+}
+.container tr:first-child td:first-child{
+    border:none;
+    background-color:white;
+}
