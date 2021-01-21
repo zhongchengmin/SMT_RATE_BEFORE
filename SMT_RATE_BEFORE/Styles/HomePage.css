@@ -50,3 +50,7 @@ a.navbar-brand:hover
     border:none;
     background-color:white;
 }
+['v-cloak']
+{
+    display:none;    
+}

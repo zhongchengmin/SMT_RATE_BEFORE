@@ -103,7 +103,7 @@ namespace SMT_RATE_BEFORE.Forms
                 AND l.timekey < '"+endTime+@"'
                 AND l.factoryname = 'NHA-SMT'
                 AND l.oldareaname ='" + oldareaname + @"'
-                AND eventusername<>'自動FT測試'
+                AND eventusername not like '%測試%'
                 " + product +line+ @"
             )b " + rn + @"
             )a left join(
@@ -121,7 +121,7 @@ namespace SMT_RATE_BEFORE.Forms
                 AND l.timekey < '" + endTime + @"'
                 AND l.factoryname = 'NHA-SMT'
                 AND l.oldareaname ='" + oldareaname + @"'
-                AND eventusername<>'自動FT測試'
+                AND eventusername not like '%測試%'
                 " + product +line+ @"
                 )group by username,userid,hour
             )b on a.HOUR=b.HOUR and a.username=b.username

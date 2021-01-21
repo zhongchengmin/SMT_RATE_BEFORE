@@ -75,7 +75,7 @@
      </row>
      </div>
      <div class="container">
-        <table>
+        <table v-bind:style="{'width':tablewidth,'display':tableShow}">
             <tr>
                 <td></td>
                 <td v-for="item in userInfo" v-bind:key="item.USERNAME" v-html="item.USERNAME+'<br/>'+item.USERID"></td>
@@ -97,6 +97,12 @@
                 
             </tr>
         </table>
+        <Alert v-bind:style="{'display':alertShow}" type="error" show-icon v-cloak>
+        沒有查詢到數據
+        <span slot="desc">
+            請重新選擇條件后再查詢.
+        </span>
+        </Alert>
      </div>
     </div>
     <script>
@@ -129,6 +135,25 @@
                 this.decideShift();//判斷日期和班別
                 this.getLineInfo(this.defaultClassValue);//請求線別數據
             },
+            computed:{
+                tablewidth:function(){
+                    if(this.userInfo.length<=5){
+                        return this.userInfo.length*10+'%';
+                    }
+                },
+                tableShow:function(){
+                    if(this.userInfo.length==0){
+                        return 'none';
+                    }
+                },
+                alertShow:function(){
+                    if(this.userInfo.length==0){
+                        return 'block';
+                    }else{
+                        return 'none';
+                    }
+                }
+            },
             methods: {
                 //判斷白晚班
                 decideShift: function () {
@@ -155,11 +180,11 @@
                     this.backStationValue = ''; //每選擇一個檢測站點就把回推站點選項清空掉
                 },//選擇課別觸發的事件
                 classChange:function(val){
-                    if(val=="三課"){
+                    if(val=="三課"||val=="一課"){
                         this.checkStation=['SMT-MOUNT', 'SMT-REFIN', 'SMT-ICT', 'SMT-FT', 'SMT-ESD', 'SMT-FV'];
                         this.backStation=['SMT-MOUNT', 'SMT-REFIN', 'SMT-ICT', 'SMT-FT', 'SMT-ESD'];
                         this.default_CheckStation='SMT-FV'
-                    }else if(val=="一課"){
+                    }else if(val=="二課"){
                         this.checkStation=['DIP-HEAD', 'DIP-REFIN', 'DIP-RT', 'DIP-TV', 'DIP-FV'];
                         this.backStation=['DIP-HEAD', 'DIP-REFIN', 'DIP-RT', 'DIP-TV'];
                         this.default_CheckStation='DIP-FV'

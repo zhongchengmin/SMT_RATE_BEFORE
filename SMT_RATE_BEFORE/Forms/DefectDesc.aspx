@@ -13,7 +13,7 @@
 <body>
     <div id="app">
     <template>
-        <i-table stripe border :columns="columns1" :data="data1" ref=table></i-table>
+        <i-table height="800" stripe border :columns="columns1" :data="data1" ref=table></i-table>
     </template>
     <div style="text-align:right;margin-right:5px">
          <i-button type="success" size="large" @click="exportData"><Icon type="ios-download-outline"></Icon>數據導出</i-button>
