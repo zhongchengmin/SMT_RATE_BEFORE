@@ -325,11 +325,13 @@
                        
                     this.getPersonPass(date,shift,line,prod,checkStation,backStation);
                 },
-                test:function(val){
-                    console.log(this.personTotalPass);
+                test:function(){
+                    console.log(123);
                 }
             }
         })
+
+        window.setInterval(app.query,10*60*1000);
     </script>
 </body>
 </html>
