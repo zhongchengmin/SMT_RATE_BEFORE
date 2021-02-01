@@ -86,7 +86,8 @@ WHERE
     AND d.oldareaname = '" + oldareaname + @"'
     AND d.revisit = 'N'
     AND d.majordefect = 'Y'
-    AND l.LOTNAME=d.LOTNAME";
+    AND l.LOTNAME=d.LOTNAME
+    AND l.FAIL>0";
 
             DBConnection.DBConnection conn = new DBConnection.DBConnection("FMMESRPT");
             DataTable dt = conn.ExcuteSingleQuery(sql).Tables[0];

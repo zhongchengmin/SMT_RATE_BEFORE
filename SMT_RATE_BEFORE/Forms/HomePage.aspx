@@ -189,6 +189,7 @@
                         this.backStation=['DIP-HEAD', 'DIP-REFIN', 'DIP-RT', 'DIP-TV'];
                         this.default_CheckStation='DIP-FV'
                     }
+                    this.backStationValue="";
                     this.getLineInfo(val);
                 },//請求料號數據
                 getProdInfo: function () {
@@ -308,7 +309,7 @@
                         document.cookie = "line=" +this.defaultLineValue+ ";expires=" + date.toGMTString() + "";
                         document.cookie = "prod=" +JSON.stringify(this.defaultProdValue)+ ";expires=" + date.toGMTString() + "";
                         document.cookie = "checkStation=" + this.default_CheckStation+ ";expires=" + date.toGMTString() + "";
-                        document.cookie = "backStation=" + this.backStationValue+ ";expires=" + date.toGMTString() + "";
+                        document.cookie = "backStation=" + (this.backStationValue===undefined?'':this.backStationValue)+ ";expires=" + date.toGMTString() + "";
                         document.cookie = "TIMEHOUR=" + TIMEHOUR+ ";expires=" + date.toGMTString() + "";
                         document.cookie = "USERID=" + USERID+ ";expires=" + date.toGMTString() + "";
                         window.open('DefectDesc.aspx','_blank');
@@ -320,7 +321,7 @@
                     var shift=this.shift;//班別
                     var prod=JSON.stringify(this.defaultProdValue);//料號
                     var checkStation=this.default_CheckStation;//檢測站點
-                    var backStation=this.backStationValue;//回推站點
+                    var backStation=this.backStationValue===undefined?'':this.backStationValue;//回推站點
                     var line=this.defaultLineValue;//線別
                        
                     this.getPersonPass(date,shift,line,prod,checkStation,backStation);
